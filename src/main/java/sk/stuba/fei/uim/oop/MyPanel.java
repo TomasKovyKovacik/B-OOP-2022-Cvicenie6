@@ -2,8 +2,10 @@ package sk.stuba.fei.uim.oop;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class MyPanel extends JPanel {
+public class MyPanel extends JPanel implements ActionListener {
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -23,5 +25,10 @@ public class MyPanel extends JPanel {
                 g.fillRect(110 + 45 * x, 110 + 45 * y, 35, 35);
             }
         }
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        System.out.println("Haloooo");
     }
 }
