@@ -12,11 +12,13 @@ public class Main {
         okno.setLayout(new GridLayout(3,4));
 
         JPanel panel = new JPanel();
-        panel.setLayout(new GridLayout(2,2));
+        panel.setLayout(new BorderLayout(5,5));
 
-        for (int i = 0; i < 4; i++) {
-            panel.add(new JLabel("Panel " + i));
-        }
+        panel.add(new JLabel("TOP"), BorderLayout.PAGE_START);
+        panel.add(new JLabel("BOTTOM"), BorderLayout.PAGE_END);
+        panel.add(new JLabel("LEFT"), BorderLayout.LINE_START);
+        panel.add(new JLabel("RIGHT"), BorderLayout.LINE_END);
+        panel.add(new JLabel("CENTER"), BorderLayout.CENTER);
 
         panel.setBackground(new Color(190,120,150));
         okno.getContentPane().setBackground(Color.YELLOW);
