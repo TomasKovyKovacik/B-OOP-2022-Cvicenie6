@@ -18,7 +18,8 @@ public class Main {
         panel.add(new JLabel("BOTTOM"), BorderLayout.PAGE_END);
         panel.add(new JLabel("LEFT"), BorderLayout.LINE_START);
         panel.add(new JLabel("RIGHT"), BorderLayout.LINE_END);
-        panel.add(new JLabel("CENTER"), BorderLayout.CENTER);
+        JLabel labelpanel = new JLabel("CENTER", SwingConstants.CENTER);
+        panel.add(labelpanel, BorderLayout.CENTER);
 
         panel.setBackground(new Color(190,120,150));
         okno.getContentPane().setBackground(Color.YELLOW);
