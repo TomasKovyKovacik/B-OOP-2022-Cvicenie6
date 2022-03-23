@@ -4,8 +4,17 @@ import java.awt.*;
 
 public class MyCanvas extends Canvas {
 
+    private boolean imageWasDrawn;
+
     @Override
     public void paint(Graphics g) {
+        if (!imageWasDrawn) {
+            this.vlastnyPaint(g);
+            imageWasDrawn = true;
+        }
+    }
+
+    private void vlastnyPaint(Graphics g) {
         g.setColor(Color.GREEN);
         g.fillRect(100,100,100,100);
         g.setColor(Color.RED);
