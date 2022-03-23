@@ -8,16 +8,27 @@ public class Main {
             checkSever(s);
         }
 
-        checkSever(SvetoveStrany.valueOf("SEVER"));
+        checkSever(SvetoveStrany.fromString("SEVER"));
         checkSever(strana);
-        checkSever(SvetoveStrany.valueOf("sever"));
+        checkSever(SvetoveStrany.fromString("sever"));
+
+        switch(strana) {
+            case SEVER:
+                System.out.println("je sever");
+                break;
+            default:
+                System.out.println("neni sever");
+                break;
+        }
     }
 
     public static void checkSever(SvetoveStrany s) {
-        if (s.equals(SvetoveStrany.SEVER)) {
+        if (s.isJeSever()) {
             System.out.println("je sever");
         } else {
             System.out.println("nie je sever");
         }
     }
+
+
 }
